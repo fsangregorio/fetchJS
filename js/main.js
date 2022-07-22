@@ -1,7 +1,7 @@
 let tienda = document.getElementById("tienda");
 let canasta = JSON.parse(localStorage.getItem("data")) || [];
 
-fetch("/js/stock.json")
+fetch("../js/stock.json")
   .then( response => response.json())
   .then( datos => {
     renderizarTienda(datos);
